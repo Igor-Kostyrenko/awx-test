@@ -1,7 +1,11 @@
 ---
-
-- name: Update and upgrade all packages
-  ansible.builtin.apt:
-    update_cache: true
-    upgrade: dist
-    cache_valid_time: 3600
+- name: update
+  hosts: all
+  become: true
+  
+  tasks:
+    - name: Update and upgrade all packages to the latest version
+      ansible.builtin.apt:
+        update_cache: true
+        upgrade: dist
+        cache_valid_time: 3600
