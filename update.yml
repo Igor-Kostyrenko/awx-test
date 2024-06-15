@@ -1,6 +1,6 @@
 ---
 - name: update
-  hosts: all
+  hosts: grafana
   remote_user: ansible
   become: true
   
