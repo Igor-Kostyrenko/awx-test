@@ -1,0 +1,11 @@
+---
+- name: update
+  hosts:
+    - grafana
+    - servers
+  remote_user: ansible
+  become: true
+  
+  tasks:
+    - name: Connection chack
+      ping:
