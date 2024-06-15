@@ -1,6 +1,7 @@
 ---
 - name: update
   hosts: all
+  emote_user: ansible
   become: true
   
   tasks:
